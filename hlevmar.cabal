@@ -19,3 +19,7 @@ library
   -- other-modules:       
   build-depends:       base ==4.6.*, hmatrix ==0.14.*, vector ==0.10.*
   hs-source-dirs:      src
+
+source-repository head
+  type:                git
+  location:            git://github.com/JohnLato/hlevmar.git
