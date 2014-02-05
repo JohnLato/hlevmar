@@ -4,7 +4,7 @@
 name:                hlevmar
 version:             0.1.0.0
 synopsis:            Levenberg-Marquardt algorithm
--- description:         
+description:         Levenberg-Marquardt algorithm
 license:             BSD3
 license-file:        LICENSE
 author:              John Lato
