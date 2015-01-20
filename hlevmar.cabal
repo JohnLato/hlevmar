@@ -17,8 +17,8 @@ cabal-version:       >=1.8
 library
   exposed-modules:     Numeric.LevMar
   -- other-modules:       
-  build-depends:       base >= 4.6 && < 4.8
-                     , hmatrix >= 0.14 && < 0.16
+  build-depends:       base >= 4.6 && < 4.9
+                     , hmatrix >= 0.14 && < 0.17
                      , vector >= 0.10  && < 0.12
   hs-source-dirs:      src
 
