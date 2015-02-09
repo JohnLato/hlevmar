@@ -23,8 +23,9 @@ module Numeric.LevMar (
 , levmar_approx
 ) where
 
-import Numeric.LinearAlgebra
 import Data.Vector.Storable (Vector)
+import Numeric.LinearAlgebra
+import Numeric.LinearAlgebra.HMatrix (Numeric)
 import qualified Data.Vector.Storable as VS
 
 import Control.Applicative
@@ -266,7 +267,7 @@ jacobianTForward f x !y0 delta = fromRows $ map dY [0..VS.length x-1]
            in VS.zipWith (\dy y -> (dy-y)*dxiInv) (f dx) y0
 
 broydens_approx
-    :: (Element r, Fractional r, Product r, Container Vector r, Num (Vector r))
+    :: (Element r, Fractional r, Product r, Container Vector r, Num (Vector r), Numeric r)
     => Matrix r -> Samples r -> Samples r -> Params r -> Matrix r
 broydens_approx jLast yLast yNew dp =
     jLast + ((asColumn $ scale (1/(dot dp dp)) (yNew - yLast - (jLast `mXv` dp)))
